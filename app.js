@@ -10,6 +10,7 @@ const batchRoute = require('./route/batchRoute');
 const studentRoute = require('./route/studentRoute');
 const trainerRoute = require('./route/trainerRoute');
 const syllabusRoute = require('./route/syllabusRoute');
+const feeupdateRoute = require('./route/feeupdateRoute');
 
 const app = express()
 
@@ -32,6 +33,7 @@ app.use("/v1/batches", batchRoute);
 app.use('/v1/students', studentRoute);
 app.use('/v1/trainers', trainerRoute);
 app.use('/v1/syllabuses', syllabusRoute);
+app.use('/v1/feeUpdates', feeupdateRoute);
 
 
 const init = async() =>{

@@ -11,6 +11,11 @@ const studentRoute = require('./route/studentRoute');
 const trainerRoute = require('./route/trainerRoute');
 const syllabusRoute = require('./route/syllabusRoute');
 const feeupdateRoute = require('./route/feeupdateRoute');
+const enquiryRoute = require('./route/enquiryRoute');
+const remarksRoute = require('./route/remarksRoute');
+const smsRoute = require('./route/smsRoute');
+const skillmarkRoute = require('./route/skillmarksRoute');
+
 
 const app = express()
 
@@ -34,6 +39,10 @@ app.use('/v1/students', studentRoute);
 app.use('/v1/trainers', trainerRoute);
 app.use('/v1/syllabuses', syllabusRoute);
 app.use('/v1/feeUpdates', feeupdateRoute);
+app.use('/v1/enquiries',enquiryRoute);
+app.use('/v1/remarks',remarksRoute);
+app.use('/v1/sms',smsRoute);
+app.use('/v1/skills',skillmarkRoute);
 
 
 const init = async() =>{
